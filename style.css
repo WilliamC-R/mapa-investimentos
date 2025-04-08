@@ -1,0 +1,540 @@
+/* =====================
+   RESET E BASE GLOBAL
+===================== */
+
+
+
+body, html{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  background: linear-gradient(to right, #151467, #092534);
+
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 2px;
+  margin-top: 0;
+  
+}
+header{
+  margin: 0;
+  padding: 0;
+align-items: center;
+flex-direction: column;
+}
+
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  display:none;
+}
+
+.subtitulo {
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1em;
+  color: #ccc;
+  margin-bottom:20px;
+}
+.titulo-mapa {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1s ease-out;
+  text-shadow: 0 4px 20px rgba(0, 255, 204, 0.1);
+}
+
+/* Detalhe decorativo abaixo do texto */
+.titulo-mapa::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #00ffc3, #00aaff);
+  margin: 16px auto 0;
+  border-radius: 4px;
+}
+
+/* Animação suave */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================
+   GRID DO INDEX
+===================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.grid .card {
+  background-color: #ffffff;
+  color: #002244;
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 4px rgba(246, 244, 244, 0.897);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.grid .card:hover {
+  background-color: #e0f7fa;
+  transform: translateY(-2px);
+}
+
+.grid .arrow {
+  background: #eef2f7;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #4b5563;
+  box-shadow: 0 8px 20px  #4b5563;
+}
+
+
+/* =====================
+   CONTAINERS ESPECÍFICOS
+===================== */
+.container-previdencia,
+.container-fundos,
+.container-isentos,
+.container-variavel,
+.container-fixa {
+  max-width: 900px;
+  margin: 0 auto;
+  padding:  20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+
+/* =====================
+   CARDS POR ABA
+===================== */
+.card-previdencia,
+.card-fundos,
+.card-isentos,
+.card-variavel,
+.card-fixa {
+  background-color: #ffffff;
+  color: #002244;
+  border-radius: 15px;
+  padding: 20px;
+  width: 200px;
+  margin-top: auto;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+}
+.card-variavel{
+  margin-top: 0px;
+}
+
+.card-previdencia:hover,
+.card-fundos:hover,
+.card-isentos:hover,
+.card-variavel:hover,
+.card-fixa:hover {
+  background-color: #e0f7fa;
+  transform: scale(1.03);
+}
+
+.texto-normal {
+  font-size: 1.5em;
+  
+}
+
+.texto-hover {
+  display: none;
+  position: flex;
+  bottom: 10px;
+  left: 10px;
+  
+  right: 10px;
+  font-size: 0.9em;
+  color: #003366;
+}
+
+.card-previdencia:hover .texto-hover,
+.card-fundos:hover .texto-hover,
+.card-isentos:hover .texto-hover,
+.card-variavel:hover .texto-hover,
+.card-fixa:hover .texto-hover {
+  display: block;
+  position: flex;
+}
+
+.card-previdencia:hover .texto-normal,
+.card-fundos:hover .texto-normal,
+.card-isentos:hover .texto-normal,
+.card-variavel:hover .texto-normal,
+.card-fixa:hover .texto-normal {
+  display: none;
+}
+
+/* =====================
+   SIMULADOR / TABELA
+===================== */
+.simulacao,
+.container-fixa form {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  background-color: #001933;
+  padding: 50px;
+  border-radius: 15px;
+  max-width: 900px;
+  margin: 0 auto 10px auto;
+  color: #ffffff;
+
+}
+
+.IR{
+text-align: center;
+margin-top: 120px;
+}
+.Botaofixa{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  border-radius: 80px;
+  grid-column: 1 / -1;
+
+}
+.simulacao h2 {
+  margin-bottom: 15px;
+}
+
+.simulacao table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.simulacao th, .simulacao td {
+  border: 1px solid #ffffff33;
+  padding: 12px;
+  text-align: center;
+  font-size: 0.95em;
+}
+
+.simulacao th {
+  background-color: #003366;
+}
+
+.simulacao tr:nth-child(even) {
+  background-color: #ffffff0d;
+}
+
+.simulacao tr:hover {
+  background-color: #ffffff1a;
+}
+
+.resultado {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #247c30;
+  border-left: 5px solid #055c1bab;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  display: none;
+}
+
+
+/* =====================
+   BOTÃO VOLTAR
+===================== */
+
+.botao-circular {
+  background-color: #aef;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  top: 40px;
+  right: 40px;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.botao-circular:hover {
+  background-color: #91d4e8;
+  transform: scale(1.05);
+}
+
+.botao-circular svg {
+  fill: #002244;
+}
+
+
+/* =====================
+   PROTEÇÃO (SEGUROS DE VIDA)
+===================== */
+.container-seguros {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-seguros {
+  background-color: #ffffff;
+  color: #002244;
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.card-seguros:hover {
+  background-color: #e0f7fa;
+  transform: scale(1.03);
+}
+
+.card-seguros .texto-normal {
+  font-size: 1.2em;
+}
+
+.card-seguros .texto-hover {
+  display: none;
+  position: flex;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  font-size: 0.9em;
+  color: #003366;
+}
+
+.card-seguros:hover .texto-hover {
+  display: block;
+}
+
+.card-seguros:hover .texto-normal {
+  display: none;
+}
+
+
+/* =====================
+   OFFSHORE
+===================== */
+.container-offshore {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-offshore {
+  background-color: #ffffff;
+  color: #002244;
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.card-offshore:hover {
+  background-color: #e0f7fa;
+  transform: scale(1.03);
+}
+
+.card-offshore .texto-normal {
+  font-size: 1.2em;
+}
+
+.card-offshore .texto-hover {
+  display: none;
+  position: flex;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  font-size: 0.9em;
+  color: #003366;
+}
+
+.card-offshore:hover .texto-hover {
+  display: block;
+}
+
+.card-offshore:hover .texto-normal {
+  display: none;
+}
+
+
+/* =====================
+   LEILÕES DE IMÓVEIS
+===================== */
+.container-leiloes {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-leiloes {
+  background-color: #ffffff;
+  color: #002244;
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.card-leiloes:hover {
+  background-color: #e0f7fa;
+  transform: scale(1.03);
+}
+
+.card-leiloes .texto-normal {
+  font-size: 1.2em;
+}
+
+.card-leiloes .texto-hover {
+  display: none;
+  position: flex;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  font-size: 0.9em;
+  color: #003366;
+}
+
+.card-leiloes:hover .texto-hover {
+  display: block;
+}
+
+.card-leiloes:hover .texto-normal {
+  display: none;
+}
+
+
+/* =====================
+   RODAPÉ
+===================== */
+footer {
+background-color: #0f172a;
+color: #ccc;
+text-align: center;
+padding: 20px;
+border-top: 1px solid #1e293b
+}
+
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo {
+  width: 180px;
+  max-width: 80%;
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.footer-name {
+  font-size: 0.55rem;
+  font-weight: 300;
+  letter-spacing: 0.9px;
+}
+.wrapper {
+  min-height: 85%;
+  display: flex;
+  flex-direction: column;
+  
+}
+main {
+  flex: 1; /* Faz o conteúdo crescer e empurrar o footer para baixo */
+  padding: 20px;
+  margin-bottom: 8px;
+}

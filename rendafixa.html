@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renda Fixa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+  <header>
+    <a href="index.html" >
+    <button class="botao-circular">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59z"/>
+        <path d="M0 0h24v24H0z" fill="none"/>
+      </svg>
+            
+    </button>
+  </a>
+    </header>
+    
+    <h1>RENDA FIXA</h1>
+    <p class="subtitulo">Regras são acordadas no início da operação.<br> Regra é fixa, mas o rendimento, não.</p>
+  </header>
+  <main>
+  <div class="container-fixa">
+      <div class="card-fixa">
+      <div class="text-fixa">
+        <h2>PRÉ-FIXADA</h2>
+        <p class="texto-normal">PRÉ FIXADO</p>
+        <p class="texto-hover"><b>O combinado só vale ao final.</b><br>
+          Você já conhece a taxa de retorno no momento da aplicação. Simples, direto e sem surpresas — desde que leve até o vencimento.</p>
+      </div>
+      <!--div class="icon-fixa">
+        <img src="icons/handshake.png" alt="ícone de aperto de mãos" />
+      </!--div-->
+    </div>
+
+    <div class="card-fixa">
+      <div class="text-fixa">
+        <h2>PÓS-FIXADA</h2>
+        <p class="texto-normal">PÓS-FIXADO</p>
+        <p class="texto-hover"><b>Rende conforme o mercado.</b><br>
+          Atrelado a índices como o CDI, sua rentabilidade acompanha a economia. Ideal para quem quer segurança com ganho ajustável</p>
+      </div>
+      <!--div class="icon-fixa">
+        <img src="icons/posfix.png" alt="ícone de gráfico pós-fixado" />
+      </!--div-->
+    </div>
+
+    <div class="card-fixa">
+      <div class="text-fixa">
+        <h2>HÍBRIDA</h2>
+        <p class="texto-normal">HIBRIDO</p>
+        <p class="texto-hover"><b>Um mix de segurança com potencial.</b><br>
+          Combina uma taxa fixa com um índice como o IPCA. Protege contra a inflação e ainda oferece rendimento real no longo prazo.</p>
+      </div>
+      <!--div class="icon-fixa">
+        <img src="icons/hibrido.png" alt="ícone de gráfico híbrido" />
+      </-div-->
+    </div>
+  </div>
+
+  <div class="container-fixa">
+    <h1>Simulador de Renda Fixa</h1>
+
+    <form id="simulador-form">
+      <label for="tipo">Tipo de investimento:</label>
+      <select id="tipo" name="tipo">
+        <option value="pre">Pré-fixado</option>
+        <option value="pos">Pós-fixado (CDI)</option>
+        <option value="hibrido">Híbrido (IPCA + taxa)</option>
+      </select>
+
+      <label for="valor">Valor inicial (R$):</label>
+      <input type="number" id="valor" name="valor" required>
+
+      <label for="aporte">Aporte mensal (R$):</label>
+      <input type="number" id="aporte" name="aporte" value="0">
+
+      <label for="taxa">Taxa (%):</label>
+      <input type="number" step="0.01" id="taxa" name="taxa" required>
+
+      <label for="prazo">Prazo (anos):</label>
+      <input type="number" id="prazo" name="prazo" required>
+      <button class="Botaofixa" type="submit">Simular</button>
+  
+    </form>
+    
+    <div id="resultado" class="resultado">
+      <!-- Resultado aparecerá aqui -->
+    </div>
+  </div>
+  </main>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <img src="icons/wiser-logo.svg" alt="Logo Wiser BTG" class="footer-logo">
+      <p class="footer-name">Desenvolvido por William Colombo</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</div>
+</body>
+</html>
