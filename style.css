@@ -30,9 +30,7 @@ flex-direction: column;
 h1 {
     font-size: clamp(2rem, 5vw, 4rem);
 }
-h2 {
-  display:none;
-}
+
 
 .subtitulo {
   text-align: center;
@@ -250,6 +248,31 @@ margin-top: 120px;
 }
 .simulacao h2 {
   margin-bottom: 15px;
+}
+.simuladorti::before { 
+     content: '';
+    display: block;
+    width: 1000px;
+    height: 4px;
+    background: linear-gradient(to right, #00ffc3, #00aaff);
+    margin: 30px auto 0;
+    border-radius: 4px;
+  }
+  .simuladorti {
+    padding-top: 80px;
+  }
+  
+  /* Animação suave */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 .simulacao table {
