@@ -11,6 +11,7 @@ body, html{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
   background: linear-gradient(to right, #151467, #092534);
+  overflow-x:  hidden;
 
 }
 
@@ -41,7 +42,7 @@ h1 {
   margin-bottom:20px;
 }
 .titulo-mapa {
-  font-size: 4rem;
+  font-size: clamp( 2rem, 6vw, 4rem);
   font-weight: 800;
   color: #ffffff;
   text-align: center;
@@ -80,6 +81,26 @@ h1 {
 /* =====================
    GRID DO INDEX
 ===================== */
+
+@media (max-width: 600px) {
+  
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .grid .card {
+    font-size: 1rem;
+    padding: 16px;
+  }
+
+  .titulo-mapa {
+    font-size: 2rem;
+  }
+  
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
