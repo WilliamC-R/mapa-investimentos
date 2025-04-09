@@ -14,15 +14,15 @@ body, html{
 
 }
 
-h1, h2 {
+h1 {
   text-align: center;
   margin-bottom: 2px;
-  margin-top: 0;
+  margin-top: 5;
   
 }
 header{
   margin: 0;
-  padding: 0;
+  padding: 20px;
 align-items: center;
 flex-direction: column;
 }
@@ -316,7 +316,24 @@ margin-top: 120px;
    BOTÃO VOLTAR
 ===================== */
 
-.botao-circular {
+.botao-circular-volta {
+  background-color: #aef;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  top: 40px;
+  left: 40px;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.botao-circular-prox {
   background-color: #aef;
   border: none;
   border-radius: 50%;
@@ -559,5 +576,5 @@ border-top: 1px solid #1e293b
 main {
   flex: 1; /* Faz o conteúdo crescer e empurrar o footer para baixo */
   padding: 20px;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
 }
