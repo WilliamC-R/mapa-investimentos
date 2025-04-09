@@ -21,12 +21,13 @@ h1 {
   margin-top: 5;
   
 }
-header{
-  margin: 0;
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
-align-items: center;
-flex-direction: column;
-position: relative;
+  margin: 0;
+  position: relative;
 }
 
 h1 {
@@ -337,6 +338,13 @@ margin-top: 120px;
   transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
+.nav-botao {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+
 
 .botao-circular-prox {
   background-color: #aef;
@@ -590,6 +598,14 @@ main {
    RESPONSIVIDADE MOBILE
 ===================== */
 @media (max-width: 600px) {
+
+  header{
+    display: flex;
+align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+}
   /* Grid da página inicial */
   .grid {
     grid-template-columns: 1fr;
@@ -642,17 +658,21 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: static ;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  }
+    left: 15px;
+    top: 15px;
+    
+   }
 
-  .botao-circular svg,
-  .botao-circular-prox svg,
-  .botao-circular-volta svg {
-    width: 20px;
-    height: 20px;
-  }
+   .botao-circular-volta svg,
+   .botao-circular-prox svg {
+     width: 20px;
+     height: 20px;
+   }
+ }
 
+ 
   /* Rodapé e logo */
   .footer-logo {
     width: 120px;
