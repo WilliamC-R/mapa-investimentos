@@ -82,24 +82,7 @@ h1 {
    GRID DO INDEX
 ===================== */
 
-@media (max-width: 600px) {
-  
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 0 10px;
-  }
 
-  .grid .card {
-    font-size: 1rem;
-    padding: 16px;
-  }
-
-  .titulo-mapa {
-    font-size: 2rem;
-  }
-  
-}
 
 .grid {
   display: grid;
@@ -294,7 +277,7 @@ margin-top: 120px;
       transform: translateY(0);
     }
   }
-}
+
 
 .simulacao table {
   width: 100%;
@@ -395,11 +378,12 @@ margin-top: 120px;
 }
 
 .card-seguros {
-  background-color: #ffffff;
+  background-color: #ffffff;  
   color: #002244;
   border-radius: 15px;
   padding: 20px;
-  width: 280px;
+  max-width: 280px;
+  width: 100%;
   text-align: center;
   font-weight: bold;
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -458,7 +442,8 @@ margin-top: 120px;
   color: #002244;
   border-radius: 15px;
   padding: 20px;
-  width: 280px;
+max-width: 280px;
+width: 100%;
   text-align: center;
   font-weight: bold;
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -517,7 +502,8 @@ margin-top: 120px;
   color: #002244;
   border-radius: 15px;
   padding: 20px;
-  width: 280px;
+  max-width: 280px;
+  width: 100%;
   text-align: center;
   font-weight: bold;
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -527,7 +513,7 @@ margin-top: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 200px;
+min-height: 200px;
 }
 
 .card-leiloes:hover {
@@ -598,4 +584,82 @@ main {
   flex: 1; /* Faz o conteúdo crescer e empurrar o footer para baixo */
   padding: 20px;
   margin-bottom: 0px;
+}
+/* =====================
+   RESPONSIVIDADE MOBILE
+===================== */
+@media (max-width: 600px) {
+  /* Grid da página inicial */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  /* Cartões de todas as abas */
+  .card-fixa,
+  .card-variavel,
+  .card-fundos,
+  .card-isentos,
+  .card-previdencia,
+  .card-leiloes,
+  .card-offshore,
+  .card-seguros {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Ajuste no formulário de simulação */
+  .simulacao,
+  .container-fixa form {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  /* Títulos e subtítulos */
+  .titulo-mapa {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .subtitulo {
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 0 12px;
+  }
+
+  /* Botões circulares */
+  .botao-circular,
+  .botao-circular-prox,
+  .botao-circular-volta {
+    width: 48px;
+    height: 48px;
+    background-color: #aef;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  .botao-circular svg,
+  .botao-circular-prox svg,
+  .botao-circular-volta svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Rodapé e logo */
+  .footer-logo {
+    width: 120px;
+  }
+
+  .footer-name {
+    font-size: 0.5rem;
+    padding: 0 10px;
+    text-align: center;
+  }
 }
